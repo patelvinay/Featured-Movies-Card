@@ -1,0 +1,38 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --clr-dark: rgb(27, 37, 46);
+  --br: 0.5em;
+}
+
+body {
+  font-family: sans-serif;
+  place-items: center;
+  display: -ms-grid;
+  display: grid;
+  background-color: var(--clr-dark);
+  color: #fff;
+  min-height: 100vh;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.movie {
+  position: relative;
+  width: 25em;
+  cursor: pointer;
+}
+
+.front .cover {
+  border-radius: var(--br);
+}
+/*# sourceMappingURL=main.css.map */
