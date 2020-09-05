@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Featured Movies</title>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/134357056c.js" crossorigin="anonymous"></script>
+    
 </head>
+<script src="//www.youtube.com/player_api"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: 'xjDjIWPwcPU'
+
+      });
+    }
+    
+    $(document).on('mouseover', '#player', function() {
+      player.playVideo();
+    });
+    $(document).on('mouseout', '#player', function() {
+      player.pauseVideo();
+    });
+    </script>
 <body>
     
     <div class="movie">
@@ -14,6 +34,36 @@
         <div class="front">
             <img src="./img/movie-cover.jpg" alt="" class="cover">
         </div>
+
+        <div class="back">
+            <div class="trailer" id="player">
+                <!-- <iframe id="player"src="https://www.youtube.com/embed/xjDjIWPwcPU" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            </div>
+
+            <div class="title">
+                <h3>Black Panther</h3>
+                <span></span>
+
+                <i class="fas fa-play ic-play"></i>
+                <i class="fas fa-plus ic-plus"></i>
+            </div>
+
+            <div class="description">
+                <p>When young King T'Challa is Drawn into conflit with an old foe that puts his homeland wakanda and the entire world at risk, he msut release Black Panther's full power to save them.</p>
+            </div>
+
+            <div class="time">
+                <p>2h 3min <span>2020</span></p>
+                <i class="far fa-comment-alt"></i>
+                    
+            </div>
+
+
+        </div>
+
+        <div class="background"></div>
     </div>
+
 </body>
 </html>
