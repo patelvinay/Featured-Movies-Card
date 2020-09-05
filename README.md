@@ -1,2 +1,2 @@
 # Featured-Movies-Card
- Prime Video (Amazon) Featured movie card
+ Prime Video (Amazon) Like Featured movie card.
